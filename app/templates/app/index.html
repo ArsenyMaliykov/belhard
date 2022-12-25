@@ -1,0 +1,34 @@
+{% extends "app/base.html" %}
+{% load static %}
+
+{% block title %}
+Main Page
+{% endblock %}
+
+{% block header %}
+<div class="container d-flex align-items-center flex-column">
+    <!-- Masthead Avatar Image-->
+    <img class="masthead-avatar mb-5" src="{% static 'assets/img/avataaars.svg' %}" alt="..." />
+    <!-- Masthead Heading-->
+    <h1 class="masthead-heading text-uppercase mb-0">portfolio</h1>
+    <!-- Icon Divider-->
+    <div class="divider-custom divider-light">
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+        <div class="divider-custom-line"></div>
+    </div>
+    <!-- Masthead Subheading-->
+    <p class="masthead-subheading font-weight-light mb-0">Everything except oxygen, a person receives for his life from food. Nutrition is one of the basic vital conditions for human existence. Food is a source of energy. Nutrition affects the state of health, performance, mood and life expectancy of a person. In other words, it is very difficult to overestimate its importance. That is why we have prepared quotes about food, from which, perhaps, you can draw new and interesting thoughts.</p>
+</div>
+{% endblock %}
+{% block content %}
+{% include "app/portfolio.html" %}
+
+{% include "app/about.html" %}
+
+{% include "app/contact.html" %}
+
+{% endblock %}
+
+
+<link rel="stylesheet" href="styles.css">

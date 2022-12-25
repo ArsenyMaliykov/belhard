@@ -1,0 +1,15 @@
+<form method="post">
+    {% csrf_token %}
+    <div class="form-floating mb-3">
+        {{ calculator_form.height }}
+        <label for="id_height">Height</label>
+        <div class="invalid-feedback" data-sb-feedback="height:required">A height is required.</div>
+    </div>
+    <div class="form-floating mb-3">
+        {{ calculator_form.width }}
+        <label for="id_width">Width</label>
+        <div class="invalid-feedback" data-sb-feedback="width:required">A width is required.</div>
+    </div>
+    <button class="btn btn-primary btn-xl" id="submitButton" type="submit">Send</button>
+    {{ result|default_if_none:"" }}
+</form>
